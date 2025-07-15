@@ -1,4 +1,4 @@
-# Week 01 – Minimum in Rotated Sorted Array
+# Problem 1 – Minimum in Rotated Sorted Array
 
 ## 🧠 Problem Summary
 Given a sorted array that is rotated at some pivot, find the **minimum element** in `O(log n)` time.  
