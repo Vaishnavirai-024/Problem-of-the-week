@@ -1,4 +1,4 @@
-#  Problem of the Week – Week 03
+#  Problem of the Week – Smallest Non-Representable Sum
 
 ---
 
