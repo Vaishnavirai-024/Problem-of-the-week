@@ -58,3 +58,47 @@ public class Approach1_HashMap {
         System.out.println("Original head: " + n1 + ", Clone head: " + cloneHead);
     }
 }
+
+
+// .......................................................................................................................
+
+// Approach2_Interleaving.java
+
+class Approach2_Interleaving {
+    public Node copyRandomList(Node head) {
+        if (head == null) return null;
+
+        // Step 1: Create new nodes interleaved with original
+        Node curr = head;
+        while (curr != null) {
+            Node clone = new Node(curr.val);
+            clone.next = curr.next;
+            curr.next = clone;
+            curr = clone.next;
+        }
+
+        // Step 2: Assign random pointers for cloned nodes
+        curr = head;
+        while (curr != null) {
+            if (curr.random != null) {
+                curr.next.random = curr.random.next;
+            }
+            curr = curr.next.next; // skip cloned node
+        }
+
+        // Step 3: Separate the cloned list from original
+        curr = head;
+        Node cloneHead = head.next;
+        while (curr != null) {
+            Node clone = curr.next;
+            curr.next = clone.next;
+            if (clone.next != null) {
+                clone.next = clone.next.next;
+            }
+            curr = curr.next;
+        }
+
+        return cloneHead;
+    }
+}
+
