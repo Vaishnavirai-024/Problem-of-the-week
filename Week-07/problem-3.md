@@ -157,6 +157,5 @@ Explanation:
 - **Use Approach 2 (DFA)** if interviewer prefers **formal parsing**.  
 - **Use Approach 3 (Regex)** if interviewer allows **short elegant solution**.  
 
-All three are valid; pick based on the **interview context**.  
 
 ---
